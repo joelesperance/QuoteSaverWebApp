@@ -1,0 +1,29 @@
+{
+  "profiles": {
+    "QuoteSaverApp": {
+      "commandName": "Project",
+      "workingDirectory": "F:\\VisualStudioProjects\\QuoteSaverApp\\QuoteSaverApp",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7093;http://localhost:5093"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:21032",
+      "sslPort": 44330
+    }
+  }
+}

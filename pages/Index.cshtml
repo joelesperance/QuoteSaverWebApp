@@ -1,0 +1,60 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center" style="font-family: 'Roboto Mono', monospace;">
+    <h1 class="display-4">QUOTE SAVER</h1>
+    <p>find a quote and save it here</p>
+</div>
+<br />
+
+<a button type="button" asp-page="Create" class="btn btn-outline-light">Add Quote</a>
+
+<br />
+
+@*   <table id="records" class="table">
+		    <thead>
+		        <tr>
+		            <th>
+		                @Html.DisplayNameFor(model => model.Records[0].Quote)
+		            </th>
+		            <th>
+		                @Html.DisplayNameFor(model => model.Records[0].Source)
+		            </th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        @foreach (var record in Model.Records)
+		        {
+		            <tr class="list-row">
+		                <td>
+		                    @Html.DisplayFor(modelItem => record.Quote)
+		                </td>
+		                <td>
+		                    @Html.DisplayFor(modelItem => record.Source)
+		                </td>
+		                <td>
+		                    <a button type="button" class="btn btn-danger" asp-page="./Delete" asp-route-id="@record.Id">Delete</a>
+		                    <a button type="button" class="btn btn-danger" asp-page="./Update" asp-route-id="@record.Id">Edit</a>
+		                </td>
+		            </tr>
+		        }
+		    </tbody>
+		</table>*@
+
+@foreach (var record in Model.Records)
+{
+    <div class="quote-center">
+	<div class="p-4 text-center align-middle">
+
+			<h3>@Html.DisplayFor(modelItem => record.Quote) </h3>
+			<br />
+			<h5> - @Html.DisplayFor(modelItem => record.Source)</h5>
+			<br />
+			<a button type="button" class="btn btn-outline-light" asp-page="./Delete" asp-route-id="@record.Id">Delete</a>
+			<a button type="button" class="btn btn-outline-light" asp-page="./Update" asp-route-id="@record.Id">Edit</a>
+	</div>
+    </div>
+}

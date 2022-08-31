@@ -1,0 +1,26 @@
+﻿@page
+@model QuoteSaverApp.Pages.UpdateModel
+@{
+}
+
+<div class="update-form">
+<form method="post">
+    <input type="hidden" asp-for="Quote.Id" />
+
+    <label asp-for="Quote.Quote" class="control-label"></label>
+    <textarea class="form-control" rows="3" asp-for="Quote.Quote" class=""></textarea>
+    <span asp-validation-for="Quote.Quote" class="text-danger"></span>
+
+    <br />
+
+    <label asp-for="Quote.Source" class="control-label"></label>
+    <input type="text" asp-for="Quote.Source" class="" />
+    <span asp-validation-for="Quote.Source" class="text-danger"></span>
+
+    <input type="submit" value="Update" class="btn btn-success"/>
+</form>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

@@ -1,0 +1,30 @@
+﻿@page
+@model QuoteSaverApp.Pages.DeleteModel
+@{
+}
+
+<div>
+<h3>Are you sure you want to delete this quote?</h3>
+
+<br />
+
+	<dl class="row">
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Quote.Quote)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Quote.Quote)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Quote.Source)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Quote.Source)
+		</dd>
+	</dl>
+	<form method="post">
+		<input type="hidden" asp-for="Quote.Id" />
+		<input type="submit" value="Delete" class="btn btn-danger" /><br />
+		<a asp-page="./Index">Back to List</a>
+	</form>
+</div>
